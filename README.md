@@ -2,6 +2,9 @@
 ## Requirements
 * python3
 * pip3
+```
+$ brew install python3-pip
+```
 ## Installing Python3 Virtual Environment
 1) Install virtualenv
 ```
