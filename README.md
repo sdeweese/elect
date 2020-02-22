@@ -1,6 +1,9 @@
 # Elect
 ## Requirements
 * python3
+```
+$ brew install python3
+```
 * pip3
 ```
 $ brew install python3-pip
