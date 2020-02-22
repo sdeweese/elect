@@ -47,5 +47,5 @@ $ (venv) pip3 freeze > requirements.txt
 
 	**Note** need to be in `project` directory and within virtual env
 ```
-$ python manage.py runserver <port number>
+$ python3 manage.py runserver <port number>
 ```
