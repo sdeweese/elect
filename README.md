@@ -23,6 +23,7 @@ $ (venv) deactivate
 ```
 ## Requirements for Virutal Environment
 * Add requirements for application
+
 	**Note** requirements.txt contains all packages needed for application
 1) Install requirements.txt
 ```
