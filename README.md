@@ -38,7 +38,8 @@ $ (venv) pip freeze > requirements.txt
 ```
 ## Run server
 
-	**Note** need to be in <project> directory and within virtual env
+	**Note** need to be in `project` directory and within virtual env
+
 ```
-$ python manage.py runserver [port number]
+$ python manage.py runserver <port number>
 ```
