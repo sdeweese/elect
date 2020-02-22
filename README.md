@@ -1,4 +1,4 @@
-# elect
+# Elect
 ## Installing Python3 Virtual Environment
 1) Install virtualenv
 ```
@@ -20,5 +20,16 @@ $ source venv/bin/activate
 ## Deactivate Virtual Environment
 ```
 $ (venv) deactivate
+```
+## Requirements for Virutal Environment
+* Add requirements for application
+1) Install requirements.txt
+**Note** requirements.txt contains all packages needed for application
+```
+$ (venn) pip install -r requirements.txt
+```
+* Add requirements to requirements.txt
+```
+$ (venv) pip freeze > requirements.txt
 ```
 
