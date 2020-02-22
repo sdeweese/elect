@@ -37,9 +37,9 @@ $ (venn) pip install -r requirements.txt
 $ (venv) pip freeze > requirements.txt
 ```
 ## Run server
+* test
 
 	**Note** need to be in `project` directory and within virtual env
-
 ```
 $ python manage.py runserver <port number>
 ```
