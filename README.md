@@ -1,7 +1,13 @@
 # Elect
 ## Requirements
 * python3
+```
+$ brew install python3
+```
 * pip3
+```
+$ brew install python3-pip
+```
 ## Installing Python3 Virtual Environment
 1) Install virtualenv
 ```
@@ -30,16 +36,16 @@ $ (venv) deactivate
 	**Note** requirements.txt contains all packages needed for application
 1) Install requirements.txt
 ```
-$ (venn) pip3 install -r requirements.txt
+$ (venv) pip3 install -r requirements.txt
 ```
 * Add requirements to requirements.txt
 ```
 $ (venv) pip3 freeze > requirements.txt
 ```
 ## Run server
-* test
+* Start Web App
 
 	**Note** need to be in `project` directory and within virtual env
 ```
-$ python manage.py runserver <port number>
+$ python3 manage.py runserver <port number>
 ```
