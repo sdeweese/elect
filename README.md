@@ -37,7 +37,7 @@ $ (venv) pip3 install -r requirements.txt
 $ (venv) pip3 freeze > requirements.txt
 ```
 ## Run server
-* test
+* Start Web App
 
 	**Note** need to be in `project` directory and within virtual env
 ```
