@@ -23,8 +23,8 @@ $ (venv) deactivate
 ```
 ## Requirements for Virutal Environment
 * Add requirements for application
+	**Note** requirements.txt contains all packages needed for application
 1) Install requirements.txt
-**Note** requirements.txt contains all packages needed for application
 ```
 $ (venn) pip install -r requirements.txt
 ```
