@@ -30,7 +30,7 @@ $ (venv) deactivate
 	**Note** requirements.txt contains all packages needed for application
 1) Install requirements.txt
 ```
-$ (venn) pip3 install -r requirements.txt
+$ (venv) pip3 install -r requirements.txt
 ```
 * Add requirements to requirements.txt
 ```
