@@ -1,4 +1,7 @@
 # Elect
+## Requirements
+* python3
+* pip3
 ## Installing Python3 Virtual Environment
 1) Install virtualenv
 ```
