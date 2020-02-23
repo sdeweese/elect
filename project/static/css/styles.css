@@ -56,11 +56,15 @@ button:hover {
 }
 
 .heading {
-    color: #554D80;
     font-size: 3em;
     position: absolute;
     left: 12%;
     top: 1%;
+}
+
+.heading a {
+    color: #554D80;
+    text-decoration: none;
 }
 
 .norm a {
