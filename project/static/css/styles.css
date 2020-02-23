@@ -23,6 +23,7 @@
 
 * {
     font-family: Open Sans;
+    box-sizing: border-box;
 }
 
 h1, h2, h3 {
@@ -147,3 +148,123 @@ button:hover {
       display: block;
       margin-top: 15%;
   }
+
+  /* Candidate-specific styles */
+
+.democratic_candidates {
+    position: absolute;
+    width: 100%;
+    height: 71px;
+    top: 40%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 65px;
+    text-align: center;
+
+    color: #FED545;
+}
+.republican_candidates {
+    position: absolute;
+    width: 100%;
+    height: 71px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 65px;
+    text-align: center;
+
+    color: #FED545;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.othercolumn {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.row {
+    width: 100%;
+    display: block !important;
+}
+
+.row1 {
+    position: absolute; 
+    top: 55%;
+    width: 100%;
+}
+.row2 {
+    position: absolute; 
+    top: 135%;
+    width: 100%;
+}
+.row3 {
+    position: absolute; 
+    top: 150%;
+    width: 100%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.candidate_text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 33px;
+    text-align: center;
+    color: #554D80;
+
+}
+.faces {
+    width: 90%;
+    height: auto;
+    padding-left: 10%;
+    position: relative;
+}
+
+.container1 {
+    position: relative;
+    width: 25%;
+}
+
+.overlay {
+position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.faces:hover .overlay {
+    opacity: 1;
+  }
+
+.text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+}

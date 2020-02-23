@@ -10,6 +10,7 @@ from . import views
 
 urlpatterns = [
     #url(r'home/', views.home, name='home'),
+    path('', views.home, name='home'),
     path('home', views.home, name='home'),
     path('quiz/', views.quiz, name='quiz'),
     path('candidates/', views.candidates, name='candidates'),
