@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django import forms
 
 
 # Create your views here.
-def homepage(request):
+def home(request):
     #return HttpResponse("Hello, world. This is our homepage.")
     return render(request, "index.html")
 

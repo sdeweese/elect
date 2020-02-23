@@ -1,13 +1,19 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../static/styles.css">
-    <style>
-        h1 {
-            color: red;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1> Hello, world. This is our index homepage.</h1>
+    {% load static %}
+    <img src="{% static 'images/logo.png' %}" alt="My image">
+    <ul>
+        <li>Candidates</li>
+        <li>Quiz</li>
+        <li>Vote</li>
+    </ul>
 </body>
 </html>
