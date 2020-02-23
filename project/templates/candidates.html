@@ -1,108 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        * {
-            font-family: Open Sans;
-            box-sizing: border-box;
-        }
-
-        .meet_the_candidates {
-            position: absolute;
-            width: 100%;
-            height: 140px;
-            left: 0px;
-            background: #554D80;
-            top: 23%;
-        }        
-
-        .header {
-            font-family: Open Sans;
-            font-weight: bold;
-            font-size: 50px;
-            text-align: center;
-            color: #FFFFFF;
-
-        }
-        .democratic_candidates {
-            position: absolute;
-            width: 100%;
-            height: 71px;
-            top: 40%;
-
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 38px;
-            line-height: 65px;
-            text-align: center;
-
-            color: #FED545;
-        }
-        .republican_candidates {
-            position: absolute;
-            width: 100%;
-            height: 71px;
-            top: 110%;
-
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 38px;
-            line-height: 65px;
-            text-align: center;
-
-            color: #FED545;
-        }
-
-        .column {
-            float: left;
-            width: 25%;
-            padding: 10px;
-        }
-
-        .othercolumn {
-            float: left;
-            width: 50%;
-            padding: 10px;
-        }
-        
-        .row1 {
-            position: absolute; 
-            top: 60%;
-            width: 100%;
-        }
-        .row2 {
-            position: absolute; 
-            top: 80%;
-            width: 100%;
-        }
-        .row3 {
-            position: absolute; 
-            top: 125%;
-            width: 100%;
-        }
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .candidate_text {
-            font-style: normal;
-            font-weight: bold;
-            font-size: 20px;
-            line-height: 33px;
-            text-align: center;
-            color: #554D80;
-
-        }
-        #faces {
-            width: 60px;
-            height: auto;
-        }
-        
-    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -111,65 +9,81 @@
 </head>
 <body>
     {% load static %}
+    
+    <!-- Logo -->
     <img src="{% static 'images/logo.png' %}" alt="logo" id="logo">
-    <ul>
-        <li>Candidates</li>
-        <li>Quiz</li>
-        <li>Vote</li>
-    </ul>
-    <div class="meet_the_candidates">
-        <h2 class="header">Meet the Candidates</h2>
+    <h1 class="heading"><a href="home">ELECT</a></h1>
+
+    <!-- Nav Bar -->
+    <nav>
+        <ul>
+            <li class="norm"><a href="candidates">Candidates</a></li>
+            <li class="norm"><a href="quiz">Quiz</a></li>
+            <li class="norm"><a href="vote">Vote</a></li>
+        </ul>
+    </nav>
+
+    <div class="bar" style="z-index: -1;">
+        <h1 style="color: white; text-align: center; padding-top: 25px;">Meet the Candidates</h2>
     </div>
-    <h1 class="democratic_candidates">Democratic Candidates</h1>
-    <div class="row1">
-        <div class="column">
+    <!-- Start Candidates Page -->
+
+    <div class="row" style="height: 200px;">
+        <h3 class="democratic_candidates">Democratic Candidates</h3>
+    </div>
+    <div class="row">
+        <div class="column container1">
             <h2 class="candidate_text">Amy Klobuchar</h2>
-            <img src="{% static 'images/amy_klobuchar.png' %}" alt="faces">
+            <img src="{% static 'images/candidates/democratic/amy_klobuchar.png' %}" class="faces">
+            <div class="overlay">
+                <div class="text">Hello World</div>
+            </div>
         </div>
         <div class="column">
             <h2 class="candidate_text">Bernie Sanders</h2>
-            <img src="{% static 'images/bernie_sanders.png' %}" alt="faces">
+            <img src="{% static 'images/candidates/democratic/bernie_sanders.png' %}" class="faces">
         </div>
         <div class="column">
             <h2 class="candidate_text">Elizabeth Warren</h2> 
-            <img src="{% static 'images/elizabeth_warren.png' %}" alt="faces">
+            <img src="{% static 'images/candidates/democratic/elizabeth_warren.png' %}" class="faces">
         </div>
-        <div class="column">
+           <div class="column">
             <h2 class="candidate_text">Joe Biden</h2>
-            <img src="{% static 'images/joe_biden.png' %}" alt="faces">
+            <img src="{% static 'images/candidates/democratic/joe_biden.png' %}" class="faces">
         </div>
-    </div>
-    <div class="row2">
         <div class="column">
             <h2 class="candidate_text">Michael Bloomberg</h2>
-            <img src="{% static 'images/michael_bloomberg.png' %}" alt="faces">
+            <img src="{% static 'images/candidates/democratic/michael_bloomberg.png' %}" class="faces">
         </div>
         <div class="column">
-            
             <h2 class="candidate_text">Pete Buttigieg</h2>
-            <img src="{% static 'images/pete_buttigieg.png' %}" alt="faces">
+            <img src="{% static 'images/candidates/democratic/pete_buttigieg.png' %}" class="faces">
         </div>
         <div class="column">
             <h2 class="candidate_text">Tom Steyer</h2>
-            <img src="{% static 'images/tom_steyer.png' %}" alt="faces">
+            <img src="{% static 'images/candidates/democratic/tom_steyer.png' %}" class="faces">
         </div>
         <div class="column">
             <h2 class="candidate_text">Tulsi Gabbard</h2>
-            <img src="{% static 'images/tulsi_gabbard.png' %}" alt="faces">
+            <img src="{% static 'images/candidates/democratic/tulsi_gabbard.png' %}" class="faces">
         </div>
     </div>
-    <h1 class="republican_candidates">Republican Candidates</h1>
-    <div class="row3">
-        <div class="othercolumn">
+
+    <div class="row" style="height: 150px; position: relative; ">
+        <h3 class="republican_candidates">Republican Candidates</h3>
+    </div>
+    <div class="row">
+        <div class="column">
             <h2 class="candidate_text">Bill Weld</h2>
-            <img src="{% static 'images/bill_weld.png' %}" alt="faces">
+            <img src="{% static 'images/candidates/republican/bill_weld.png' %}" class="faces">
         </div>
-        <div class="othercolumn">
+        <div class="column">
             <h2 class="candidate_text">Donald Trump</h2>
-            <img src="{% static 'images/donald_trump.png' %}" alt="faces">
+            <img src="{% static 'images/candidates/republican/donald_trump.png' %}" class="faces">
         </div>
     </div>
-    
-    
+
+    <!-- Footer -->
+    <div class="footer"></div>
 </body>
 </html>
