@@ -1,4 +1,324 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <style>
+        .slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+tr {
+    
+}
+
+    </style>
+
+</head>
+<body>
+    <h1> Quiz.html </h1>
+
+    <div class="table" style="float: center;">
+    <table>
+        <tr>
+            <td style="text-align: center;">
+                <label>Should the U.S. Government raise or lower defense spending? Value: <span id="demo1"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Lower</label> <label style="float:right;">Raise</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>Do you generally support more open borders or closed borders? Value: <span id="demo2"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Closed Borders</label> <label style="float:right;">Open Borders</label style="float:right;">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>What is your position on gun control? Value: <span id="demo3"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Protect the 2nd Amendment</label> <label style="float:right;">More Gun Control</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>What is your opinion of the American criminal justice system? Value: <span id="demo4"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">It Works Just Fine</label> <label style="float:right;">It Needs Reform</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange4">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>How should the U.S. treat recreational drug use? Value: <span id="demo5"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">More Enforcement</label> <label style="float:right;">Decriminalize</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange5">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>How do you feel about current civil rights protections in the United States? Value: <span id="demo6"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Current Protections Adequate</label> <label style="float:right;">Reform Needed</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange6">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>What steps should we take to prevent/slow climate change? Value: <span id="demo8"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">No Action Required</label> <label style="float:right;">Green New Deal</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange8">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>Do you believe in more protectionist trade policies or free trade? Value: <span id="demo7"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Tariffs/Protectionist</label> <label style="float:right;">Free Trade</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange7">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>Generally, does the Federal Government spend too much or too little? Value: <span id="demo9"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Too Much</label> <label style="float:right;">Too Little</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange9">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>To what degree do you support taxation of wealthy Americans? Value: <span id="demo10"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">The Wealthy Already Pay Their Fair Share</label> <label style="float:right;">They Should Be Taxed More</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange10">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>Do you support expanding Social Security? Value: <span id="demo11"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Current Benefits Are Fine</label> <label style="float:right;">More Assistance for Seniors</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange11">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>Should the government increase investment in infrastructure? Value: <span id="demo12"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Current Level Is Appropriate</label> <label style="float:right;">Government Should Invest More</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange12">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>How should Americans pay for higher education? Value: <span id="demo13"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Private Individual Funding</label> <label style="float:right;">Government Funding</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange13">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>How should the healthcare system in the US be structured? Value: <span id="demo14"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Private System</label> <label style="float:right;">Single Payer System (All Covered by Government)</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange14">
+                </div>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <label>Regarding abortion, would you consider yourself to be more pro-choice or pro-life? Value: <span id="demo15"></span></label>
+                <div class="slidecontainer">
+                    <label style="float:left;">Pro-Life</label> <label style="float:right;">Pro-Choice</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange15">
+                </div>
+                <br />
+            </td>
+        </tr>
+    </table>
+    </div>
+
+<script>
+            var slider1 = document.getElementById("myRange1");
+            var output1 = document.getElementById("demo1");
+            var slider2 = document.getElementById("myRange2");
+            var output2 = document.getElementById("demo2");
+            var slider3 = document.getElementById("myRange3");
+            var output3 = document.getElementById("demo3");
+            var slider4 = document.getElementById("myRange4");
+            var output4 = document.getElementById("demo4");
+            var slider5 = document.getElementById("myRange5");
+            var output5 = document.getElementById("demo5");
+            var slider6 = document.getElementById("myRange6");
+            var output6 = document.getElementById("demo6");
+            var slider7 = document.getElementById("myRange7");
+            var output7 = document.getElementById("demo7");
+            var slider8 = document.getElementById("myRange8");
+            var output8 = document.getElementById("demo8");
+            var slider9 = document.getElementById("myRange9");
+            var output9 = document.getElementById("demo9");
+            var slider10 = document.getElementById("myRange10");
+            var output10 = document.getElementById("demo10");
+            var slider11 = document.getElementById("myRange11");
+            var output11 = document.getElementById("demo11");
+            var slider12 = document.getElementById("myRange12");
+            var output12 = document.getElementById("demo12");
+            var slider13 = document.getElementById("myRange13");
+            var output13 = document.getElementById("demo13");
+            var slider14 = document.getElementById("myRange14");
+            var output14 = document.getElementById("demo14");
+            var slider15 = document.getElementById("myRange15");
+            var output15 = document.getElementById("demo15");
+
+            output1.innerHTML = slider1.value;
+            output2.innerHTML = slider2.value;
+            output3.innerHTML = slider3.value;
+            output4.innerHTML = slider4.value;
+            output5.innerHTML = slider5.value;
+            output6.innerHTML = slider6.value;
+            output7.innerHTML = slider7.value;
+            output8.innerHTML = slider8.value;
+            output9.innerHTML = slider9.value;
+            output10.innerHTML = slider10.value;
+            output11.innerHTML = slider11.value;
+            output12.innerHTML = slider12.value;
+            output13.innerHTML = slider13.value;
+            output14.innerHTML = slider14.value;
+            output15.innerHTML = slider15.value;
+
+            
+            slider1.oninput = function() {
+                output1.innerHTML = this.value;
+            }
+
+            slider2.oninput = function() {
+                output2.innerHTML = this.value;
+            }
+            
+            slider3.oninput = function() {
+                output3.innerHTML = this.value;
+            }
+
+            slider4.oninput = function() {
+                output4.innerHTML = this.value;
+            }
+            
+            slider5.oninput = function() {
+                output5.innerHTML = this.value;
+            }
+
+            slider6.oninput = function() {
+                output6.innerHTML = this.value;
+            }
+
+            slider7.oninput = function() {
+                output7.innerHTML = this.value;
+            }
+
+            slider8.oninput = function() {
+                output8.innerHTML = this.value;
+            }
+            
+            slider9.oninput = function() {
+                output9.innerHTML = this.value;
+            }
+
+            slider10.oninput = function() {
+                output10.innerHTML = this.value;
+            }
+
+            slider11.oninput = function() {
+                output11.innerHTML = this.value;
+            }
+
+            slider12.oninput = function() {
+                output12.innerHTML = this.value;
+            }
+
+            slider13.oninput = function() {
+                output13.innerHTML = this.value;
+            }
+
+            slider14.oninput = function() {
+                output14.innerHTML = this.value;
+            }
+
+            slider15.oninput = function() {
+                output15.innerHTML = this.value;
+            }
+</script>
+
+=======
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -9,11 +329,23 @@
 </head>
 <body>
     {% load static %}
+    
+    <!-- Logo -->
     <img src="{% static 'images/logo.png' %}" alt="logo" id="logo">
-    <ul>
-        <li>Candidates</li>
-        <li>Quiz</li>
-        <li>Vote</li>
-    </ul>
+    <h1 class="heading"><a href="home">ELECT</a></h1>
+
+    <!-- Nav Bar -->
+    <nav>
+        <ul>
+            <li class="norm"><a href="candidates">Candidates</a></li>
+            <li class="norm"><a href="quiz">Quiz</a></li>
+            <li class="norm"><a href="vote">Vote</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Footer -->
+    <div class="footer"></div>
+>>>>>>> b6677944df7971eed632ff11962b2a6c8042fcbf
 </body>
 </html>

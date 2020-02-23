@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% load static %}
+    
+    <!-- Logo -->
+    <img src="{% static 'images/logo.png' %}" alt="logo" id="logo">
+    <h1 class="heading"><a href="home">ELECT</a></h1>
+
+    <!-- Nav Bar -->
+    <nav>
+        <ul>
+            <li class="norm"><a href="candidates">Candidates</a></li>
+            <li class="norm"><a href="quiz">Quiz</a></li>
+            <li class="norm"><a href="vote">Vote</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Footer -->
+    <div class="footer"></div>
+</body>
+</html>
