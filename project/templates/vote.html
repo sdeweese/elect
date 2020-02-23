@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        #map {
+            width: 1000px;
+            height: auto;
+        }
+        .fix {
+            position:fixed;
+            bottom:-180px;
+            left:15%;
+        }
+        .title_space {
+            position: absolute;
+            width: 100%;
+            height: 71px;
+            top: 30%;
+
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 38px;
+            line-height: 65px;
+            text-align: center;
+
+            color: #FED545;
+        }
+        .where_to_vote {
+            position: absolute;
+            width: 100%;
+            height: 140px;
+            left: 0px;
+            background: #554D80;
+            top: 23%;
+        } 
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,9 +56,14 @@
             <li class="norm"><a href="vote">Vote</a></li>
         </ul>
     </nav>
-    
 
+    
     <!-- Footer -->
-    <div class="footer"></div>
+    <div class="footer">
+        <h2><a href="https://www.sccgov.org/sites/rov/Pages/Registrar-of-Voters.aspx" class="title_space">Where to Vote Near Us</a></h2>
+    </div>
+
+    <img src="{% static 'images/where_to_vote.png' %}" alt="map" id="map" class="fix">
+
 </body>
 </html>
