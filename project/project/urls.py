@@ -9,11 +9,12 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    #url(r'home/', views.home, name='home'),
     path('home', views.home, name='home'),
-    path('quiz', views.quiz, name='quiz'),
-    path('candidates', views.candidates, name='candidates'),
-    path('vote', views.vote, name='vote'),
-    path('results', views.results, name='results'),
+    path('quiz/', views.quiz, name='quiz'),
+    path('candidates/', views.candidates, name='candidates'),
+    path('vote/', views.vote, name='vote'),
+    path('results/', views.results, name='results'),
     path('admin/', admin.site.urls),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + staticfiles_urlpatterns()

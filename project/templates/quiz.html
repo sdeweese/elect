@@ -17,9 +17,9 @@
     <!-- Nav Bar -->
     <nav>
         <ul>
-            <li class="norm"><a href="candidates">Candidates</a></li>
-            <li class="norm"><a href="quiz">Quiz</a></li>
-            <li class="norm"><a href="vote">Vote</a></li>
+            <li class="norm"><a href="/candidates/">Candidates</a></li>
+            <li class="norm"><a href="/quiz/">Quiz</a></li>
+            <li class="norm"><a href="/vote/">Vote</a></li>
         </ul>
     </nav>
 
@@ -30,12 +30,16 @@
 
     <br><br>
     <div class="table" style="float: center;">
+    <form action="/results/" method="POST" id="nameform">
+    {% csrf_token %}
     <table>
         <tr>
             <td style="text-align: center;">
                 <label>Should the U.S. Government raise or lower defense spending? Value: <span id="demo1"></span></label>
+                <label for="war_and_peace">war_and_peace</label>
+                {{ survey.war_and_peace }}
                 <div class="slidecontainer">
-                    <label style="float:left;">Lower</label> <label style="float:right;">Raise</label>
+                    <span style="float:left;">Lower</span> <span style="float:right;">Raise</span>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
                 </div>
                 <br />
@@ -43,9 +47,10 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>Do you generally support more open borders or closed borders? Value: <span id="demo2"></span></label>
+                <label for="immigration">Do you generally support more open borders or closed borders? Value: <span id="demo2"></span></label>
+                {{ survey.immigration }}
                 <div class="slidecontainer">
-                    <label style="float:left;">Closed Borders</label> <label style="float:right;">Open Borders</label style="float:right;">
+                    <span style="float:left;">Closed Borders</span> <span style="float:right;">Open Borders</span>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
 
                 </div>
@@ -54,7 +59,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>What is your position on gun control? Value: <span id="demo3"></span></label>
+                <label for="gun_control">What is your position on gun control? Value: <span id="demo3"></span></label>
+                {{ survey.gun_control }}
                 <div class="slidecontainer">
                     <label style="float:left;">Protect the 2nd Amendment</label> <label style="float:right;">More Gun Control</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
@@ -64,7 +70,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>What is your opinion of the American criminal justice system? Value: <span id="demo4"></span></label>
+                <label for="crime">What is your opinion of the American criminal justice system? Value: <span id="demo4"></span></label>
+                {{ survey.crime }}
                 <div class="slidecontainer">
                     <label style="float:left;">It Works Just Fine</label> <label style="float:right;">It Needs Reform</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange4">
@@ -74,7 +81,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>How should the U.S. treat recreational drug use? Value: <span id="demo5"></span></label>
+                <label for="drugs">How should the U.S. treat recreational drug use? Value: <span id="demo5"></span></label>
+                {{ survey.drugs }}
                 <div class="slidecontainer">
                     <label style="float:left;">More Enforcement</label> <label style="float:right;">Decriminalize</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange5">
@@ -84,7 +92,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>How do you feel about current civil rights protections in the United States? Value: <span id="demo6"></span></label>
+                <label for="civil_rights">How do you feel about current civil rights protections in the United States? Value: <span id="demo6"></span></label>
+                {{ survey.civil_rights }}
                 <div class="slidecontainer">
                     <label style="float:left;">Current Protections Adequate</label> <label style="float:right;">Reform Needed</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange6">
@@ -94,7 +103,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>What steps should we take to prevent/slow climate change? Value: <span id="demo8"></span></label>
+                <label for="jobs">What steps should we take to prevent/slow climate change? Value: <span id="demo8"></span></label>
+                {{ survey.jobs }}
                 <div class="slidecontainer">
                     <label style="float:left;">No Action Required</label> <label style="float:right;">Green New Deal</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange8">
@@ -104,7 +114,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>Do you believe in more protectionist trade policies or free trade? Value: <span id="demo7"></span></label>
+                <label for="environment">Do you believe in more protectionist trade policies or free trade? Value: <span id="demo7"></span></label>
+                {{ survey.environment }}
                 <div class="slidecontainer">
                     <label style="float:left;">Tariffs/Protectionist</label> <label style="float:right;">Free Trade</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange7">
@@ -114,7 +125,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>Generally, does the Federal Government spend too much or too little? Value: <span id="demo9"></span></label>
+                <label for="budget_and_economy">Generally, does the Federal Government spend too much or too little? Value: <span id="demo9"></span></label>
+                {{ survey.budget_and_economy }}
                 <div class="slidecontainer">
                     <label style="float:left;">Too Much</label> <label style="float:right;">Too Little</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange9">
@@ -124,7 +136,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>To what degree do you support taxation of wealthy Americans? Value: <span id="demo10"></span></label>
+                <label for="tax_reform">To what degree do you support taxation of wealthy Americans? Value: <span id="demo10"></span></label>
+                {{ survey.tax_reform }}
                 <div class="slidecontainer">
                     <label style="float:left;">The Wealthy Already Pay Their Fair Share</label> <label style="float:right;">They Should Be Taxed More</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange10">
@@ -134,7 +147,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>Do you support expanding Social Security? Value: <span id="demo11"></span></label>
+                <label for="social_security">Do you support expanding Social Security? Value: <span id="demo11"></span></label>
+                {{ survey.social_security }}
                 <div class="slidecontainer">
                     <label style="float:left;">Current Benefits Are Fine</label> <label style="float:right;">More Assistance for Seniors</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange11">
@@ -144,7 +158,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>Should the government increase investment in infrastructure? Value: <span id="demo12"></span></label>
+                <label for="infrastructure">Should the government increase investment in infrastructure? Value: <span id="demo12"></span></label>
+                {{ survey.infrastructure }}
                 <div class="slidecontainer">
                     <label style="float:left;">Current Level Is Appropriate</label> <label style="float:right;">Government Should Invest More</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange12">
@@ -154,7 +169,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>How should Americans pay for higher education? Value: <span id="demo13"></span></label>
+                <label for="education">How should Americans pay for higher education? Value: <span id="demo13"></span></label>
+                {{ survey.education }}
                 <div class="slidecontainer">
                     <label style="float:left;">Private Individual Funding</label> <label style="float:right;">Government Funding</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange13">
@@ -164,7 +180,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>How should the healthcare system in the US be structured? Value: <span id="demo14"></span></label>
+                <label for="healthcare">How should the healthcare system in the US be structured? Value: <span id="demo14"></span></label>
+                {{ survey.healthcare }}
                 <div class="slidecontainer">
                     <label style="float:left;">Private System</label> <label style="float:right;">Single Payer System (All Covered by Government)</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange14">
@@ -174,7 +191,8 @@
         </tr>
         <tr>
             <td style="text-align: center;">
-                <label>Regarding abortion, would you consider yourself to be more pro-choice or pro-life? Value: <span id="demo15"></span></label>
+                <label for="abortion">Regarding abortion, would you consider yourself to be more pro-choice or pro-life? Value: <span id="demo15"></span></label>
+                {{ survey.abortion }}
                 <div class="slidecontainer">
                     <label style="float:left;">Pro-Life</label> <label style="float:right;">Pro-Choice</label>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange15">
@@ -183,6 +201,8 @@
             </td>
         </tr>
     </table>
+    <button type="submit" form="nameform" value="Submit">Submit</button>
+    </form>
     </div>
 
 <script>
