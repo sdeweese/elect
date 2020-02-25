@@ -2,13 +2,13 @@
 ## Requirements
 * python3
 
-	**Note** This command is for mac with homebrew installed
+	**Note** This command is for mac with homebrew installed (will be different for linux or windows)
 ```
 $ brew install python3
 ```
 * pip3
 
-	**Note** This command is for mac with homebrew installed
+	**Note** This command is for mac with homebrew installed (will be different for linux or windows)
 ```
 $ brew install python3-pip
 ```
